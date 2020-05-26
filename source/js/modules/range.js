@@ -16,7 +16,6 @@ var range = {
     minX: Math.floor($('.range__area').offset().left - $('.range__area').outerWidth() - $('.popup').offset().left - $('.range__range-button').outerWidth() / 2 + $('.range__area').outerWidth() + 10),
     maxX: Math.floor($('.range__area').offset().left - $('.popup').offset().left - $('.range__range-button').outerWidth() + $('.range__area').outerWidth() + 10),
     difference: () => {
-      console.log(($('.range__range-button').offset().left - range.LocationParams.maxX) - $('.popup').offset().left - 28);
       return ($('.range__range-button').offset().left - range.LocationParams.maxX) - $('.popup').offset().left - 28
     }
   },
