@@ -1,0 +1,98 @@
+.range {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  transform: translateX(10px);
+
+  &__area {
+    position: relative;
+
+    width: 240px;
+    height: 8px;
+    margin: 0 16px;
+    border-radius: 6px;
+
+    background-color: rgba(88, 88, 88, 0.4);
+    box-shadow:
+      inset 0 2px 2px 0 rgba(0, 0, 0, .5),
+      0 1px 2px 0 rgba(255, 255, 255, .15);
+  }
+
+  &__range-button {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 89px;
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+
+    outline: none;
+    background-color: $white;
+    background-image: url("../img/range.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow:
+      inset 0 0 1px 1px rgba(255, 255, 255, 0.5),
+      0 2px 2px 0 rgba(0, 0, 0, 0.71),
+      0 0 10px 1px rgba(255, 255, 255, 0.2);
+
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.81);
+    }
+  }
+
+  &__additional-button {
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+    border: none;
+
+    background-color: transparent;
+
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      &::before,
+      &::after {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.81);
+      }
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 20px;
+      height: 4px;
+
+      background-color: $white;
+    }
+
+    &::before {
+      content: "";
+
+      transform: translate(-50%, -50%);
+    }
+
+    &_plus {
+      &::after {
+        content: "";
+
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+  }
+}

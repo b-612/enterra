@@ -1,0 +1,24 @@
+.rate {
+  display: flex;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+
+  font-size: 22px;
+
+  background-color: #2a2a2a;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    line-height: 1.15;
+  }
+
+  &__image {
+    margin-left: 14px;
+    margin-right: 14px;
+    margin-bottom: -7px;
+  }
+}
